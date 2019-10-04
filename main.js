@@ -8,7 +8,6 @@ let intro = `
  * 先准备一个div
  */
 #div1 {
-  border: 1px solid red;
   width: 200px;
   height: 200px;
 }
@@ -25,6 +24,8 @@ let intro = `
  */
 #div1{
   background: linear-gradient(90deg, rgba(36,30,0,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 100%);
+  animation: rotate 5s linear infinite;
+
 }
 /* 黑白两极 */
 #div1::before {
@@ -44,6 +45,14 @@ let intro = `
   transform: translateX(-50%);
   background: radial-gradient(circle, rgba(36,30,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
   border-radius: 50%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 `;
 
